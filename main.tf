@@ -9,7 +9,7 @@ resource "aws_iam_user_login_profile" "example" {
 }
 
 resource "aws_iam_user_policy" "lb_ro" {
-  name = "var.policy_name"
+  name = var.policy_name
   user = aws_iam_user.lb.name
 
   # Terraform's "jsonencode" function converts a
